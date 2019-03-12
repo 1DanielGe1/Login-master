@@ -22,8 +22,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    //首次创建数据库的时候调用，一般可以执行建库，建表的操作
-    //Sqlite没有单独的布尔存储类型，它使用INTEGER作为存储类型，0为false，1为true
+    //used at the first time.
     public void onCreate(SQLiteDatabase db){
         //user table
         db.execSQL("create table if not exists user_tb(_id integer primary key autoincrement," +
